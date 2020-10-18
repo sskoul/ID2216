@@ -320,7 +320,9 @@ vector<vector <int> > Generate_Requests(int Set_Size, int Num_Elements, int Requ
 		
 		vector <int> Temp;
 		
-		
+	
+	// uncomment the lines 326-331 and comment lines 333-338 to switch between the types of requests described in Section 5.
+	
 	//	Temp.push_back( rand() % 2);
 
 	//	for (int j = 1; j <= Set_Size - 1; j++) {
@@ -694,7 +696,9 @@ vector <int> Simulate_Det_Round( vector <vector <int> >& Reqs, int Num_Elements 
 
 
 
-// Simulation of Deterministic , Randomized , Feige-Lovasz-Tetali
+// Simulation of Deterministic , Randomized , Feige-Lovasz-Tetali. The argument "Times" denote the number of times the simulation is conducted and its value must agree
+//with the value of the variable "Copies" in "Make_Plots.py".
+
 void Repeat (int Rounds, int Cardinality, int Num_Elements, int Times) {
 
 	vector <int> Cost_Rand_Round , Cost_Rand_Per , Cost_LTF , Cost_Det_Round;
@@ -725,9 +729,9 @@ void Repeat (int Rounds, int Cardinality, int Num_Elements, int Times) {
 int main () {
 	srand (time(0));
 
-	//Repeat(600 , 5 , 100 , 3 );
+	//Repeat(10000 , 5 , 100 , 3 );
 
-	Repeat(600 , 10 , 100 , 3 );
+	Repeat(10000 , 10 , 100 , 3 );
 	return 1;
 }
 
