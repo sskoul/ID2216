@@ -5,7 +5,6 @@
 #include <vector>
 #include <algorithm>
 #include <set>
-#include <graphics.h>
 #include <fstream>
 #include <string>
 
